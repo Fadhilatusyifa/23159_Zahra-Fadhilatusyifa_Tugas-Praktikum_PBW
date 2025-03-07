@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>Form dan Tabel</title>
+</head>
+<!-- body class digunakan untuk mengatur tampilan utama -->
+<body class="flex flex-col items-center bg-[#2D336B] min-h-screen">
+
+  <!-------------------------- Container Utama ------------------------------->
+  <!-- Container UTama digunakan untuk menampung seluruh elemen dalam halaman, yaitu form dan tabel penjualan -->
+  <div class="flex flex-col items-center flex-grow w-full py-10">
+    
+    <!------------------------ Form Penjualan -------------------------------->
+    <div class="w-1/2 p-6 shadow-lg rounded-lg border border-gray-300 text-center bg-gradient-to-b from-[#FFF2F2] to-[#A9B5DF] 
+                transition-all duration-300 hover:scale-105">
+      <h2 class="text-2xl font-bold mb-4">Form Penjualan</h2>
+      <form>
+        <!-- Input untuk nama Produk -->
+        <div class="mb-4 text-left">
+          <label class="block font-semibold" for="produk">Produk</label>
+          <input type="text" id="produk" class="w-full p-2 border border-gray-300 rounded mt-1">
+        </div>
+        
+        <!-- Input untuk Jumlah produk -->
+        <div class="mb-4 text-left">
+          <label class="block font-semibold" for="jumlah">Jumlah</label>
+          <input type="number" id="jumlah" class="w-full p-2 border border-gray-300 rounded mt-1">
+        </div>
+
+        <!-- Input untuk harga produk -->
+        <div class="mb-4 text-left">
+          <label class="block font-semibold" for="harga">Harga</label>
+          <input type="text" id="harga" class="w-full p-2 border border-gray-300 rounded mt-1">
+        </div>
+
+        <!-- Tombol 'Tambahkan' untuk menambahkan data penjualan setelah semua input dimasukkan-->
+        <button class="w-full bg-[#2D336B] hover:bg-[#7886C7] text-white p-2 rounded text-lg font-semibold">Tambahkan</button>
+      </form>
+    </div>
+
+
+    <!-------------------------- Tabel Penjualan ------------------------------->
+    <div class="w-1/2 p-6 shadow-lg rounded-lg border border-gray-300 mt-8 text-center bg-gradient-to-b from-[#FFF2F2] to-[#A9B5DF] 
+                transition-all duration-300 hover:scale-105">
+      <h2 class="text-2xl font-bold mb-4">Data Penjualan Bulanan</h2>
+      <table class="w-full border-collapse border border-gray-400">
+        
+        <!-- header tabel yang menampilkan nama kolom -->
+        <thead>
+          <!-- header tabel, baris pertama -->
+          <tr class="bg-[#2D336B] text-white">
+            <th class="border border-gray-400 p-2" rowspan="2">No</th>        <!-- Kolom Untuk No urut -->
+            <th class="border border-gray-400 p-2" rowspan="2">Produk</th>    <!-- Kolom Untuk nama produk-->
+            <th class="border border-gray-400 p-2" colspan="2">Penjualan</th> <!-- Kolom gabungan untuk jumlah dan harga total -->
+          </tr>
+
+          <!-- sub-header untuk kolom jumlah dan harga total -->
+          <tr class="bg-[#2D336B] text-white">
+            <th class="border border-gray-400 p-2">Jumlah</th>      <!-- Kolom untuk jumlah produk yang terjual -->
+            <th class="border border-gray-400 p-2">Harga Total</th> <!-- Kolom untuk total harga dari produk yang terjual -->
+          </tr>
+        </thead>
+
+        <!-- data penjualan per produk -->
+        <tbody>
+          <!-- Data Pertama: Sepatu -->
+          <tr class="bg-gray-50">
+            <td class="border border-gray-400 p-2">1</td>
+            <td class="border border-gray-400 p-2">Sepatu</td>
+            <td class="border border-gray-400 p-2">50</td>
+            <td class="border border-gray-400 p-2">Rp 25.000.000</td>
+          </tr>
+
+          <!-- Data Kedua: Tas-->
+          <tr class="bg-gray-50">
+            <td class="border border-gray-400 p-2">2</td>
+            <td class="border border-gray-400 p-2">Tas</td>
+            <td class="border border-gray-400 p-2">30</td>
+            <td class="border border-gray-400 p-2">Rp 15.000.000</td>
+          </tr>
+
+          <!-- Data Ketiga: Jam Tangan-->
+          <tr class="bg-gray-50">
+            <td class="border border-gray-400 p-2">3</td>
+            <td class="border border-gray-400 p-2">Jam Tangan</td>
+            <td class="border border-gray-400 p-2">20</td>
+            <td class="border border-gray-400 p-2">Rp 10.000.000</td>
+          </tr>
+        </tbody>
+
+        <!-- baris terakhir yang menampilkan total keseluruhan penjualan -->
+        <tfoot>
+          <!-- Baris Total Penjualan -->
+          <tr class="bg-gray-200 font-bold">
+            <td class="border border-gray-400 p-2" colspan="2">Total Penjualan</td>
+            <td class="border border-gray-400 p-2">100</td>
+            <td class="border border-gray-400 p-2">Rp 50.000.000</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+
+  <!---------------------------------- Copyright  ------------------------------->
+  <!-- Footer halaman untuk menampilkan nama dan npm-->
+  <footer class="w-full bg-[#FFF2F2] text-center text-sm font-semibold text-gray-700 py-3 mt-auto"> Zahra Fadhilatusyifa (2310631170159) </footer>
+
+</body>
+</html>
